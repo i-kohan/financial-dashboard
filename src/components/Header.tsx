@@ -14,7 +14,11 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, pageTitle }) => {
 
   return (
     <header className="flex w-full items-center justify-between bg-white p-8 shadow-md">
-      <button className="lg:hidden" onClick={onMenuClick}>
+      <button
+        aria-label="Open menu button"
+        className="lg:hidden"
+        onClick={onMenuClick}
+      >
         ☰
       </button>
 
@@ -33,11 +37,17 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, pageTitle }) => {
         </div>
 
         <div className="flex items-center space-x-8">
-          <button className="bg-catskill-white hidden rounded-full p-3 transition hover:bg-gray-200 md:block">
+          <button
+            aria-label="Settings button"
+            className="bg-catskill-white hidden rounded-full p-3 transition hover:bg-gray-200 md:block"
+          >
             <SettingsIcon className="h-5 w-5 text-blue-500" />
           </button>
 
-          <button className="bg-catskill-white hidden rounded-full p-3 transition hover:bg-gray-200 md:block">
+          <button
+            aria-label="Notifications button"
+            className="bg-catskill-white hidden rounded-full p-3 transition hover:bg-gray-200 md:block"
+          >
             <NotificationIcon className="h-5 w-5 text-blue-500" />
           </button>
 

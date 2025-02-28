@@ -1,11 +1,11 @@
 import { Suspense } from "react";
 
-import ErrorBoundary from "../components/ErrorBoundary";
-import { Skeleton } from "../components/Skeleton";
-import { AllCreditCardsList } from "../features/credit-cards/AllCreditCardsList";
-import { AppLayout } from "../layouts/AppLayout";
+import ErrorBoundary from "../../components/ErrorBoundary";
+import { Skeleton } from "../../components/Skeleton";
+import { AllCreditCardsList } from "../../features/credit-cards/AllCreditCardsList";
+import { AppLayout } from "../../layouts/AppLayout";
 
-export const CreditCardsPage = () => {
+export const CreditCards = () => {
   return (
     <AppLayout pageTitle="Credit cards">
       <ErrorBoundary

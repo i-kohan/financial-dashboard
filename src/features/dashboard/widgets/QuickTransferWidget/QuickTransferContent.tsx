@@ -55,6 +55,7 @@ export const QuickTransferContent = () => {
         </div>
 
         <button
+          aria-label="Next contact button"
           onClick={handleNextSlide}
           className="absolute right-0 z-10 flex h-16 w-16 items-center justify-center rounded-full bg-white p-2 shadow-2xl transition hover:bg-gray-100"
         >
@@ -82,6 +83,7 @@ export const QuickTransferContent = () => {
             disabled={!selectedContact}
             onClick={() => alert(`Sending $${amount} to ${selectedContact}`)}
             className="absolute top-1/2 right-0 -translate-y-1/2"
+            aria-label="Send money"
           >
             Send
           </Button>

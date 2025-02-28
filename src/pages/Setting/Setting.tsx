@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-import { Tab } from "../components/Tab";
-import { Tabs } from "../components/Tabs/Tabs";
-import { SettingsLayout } from "../features/setting/layouts/SettingsLayout";
-import { ProfileForm } from "../features/setting/ProfileForm";
+import { Tab } from "../../components/Tab";
+import { Tabs } from "../../components/Tabs/Tabs";
+import { SettingsLayout } from "../../features/setting/layouts/SettingsLayout";
+import { ProfileForm } from "../../features/setting/ProfileForm";
 
 export const Setting = () => {
   const tabs = ["Edit Profile", "Preferences", "Security"] as const;

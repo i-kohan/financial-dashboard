@@ -49,6 +49,7 @@ export const ProfileForm = () => {
             <Label htmlFor="name" label="Your Name">
               <Input
                 {...register("name", { required: "Name is required" })}
+                aria-invalid={errors.name ? "true" : "false"}
                 id="name"
               />
               {errors.name && (
@@ -65,6 +66,7 @@ export const ProfileForm = () => {
                     message: "Invalid email format",
                   },
                 })}
+                aria-invalid={errors.email ? "true" : "false"}
                 id="email"
                 type="email"
               />
@@ -95,6 +97,7 @@ export const ProfileForm = () => {
               <Input
                 {...register("username", { required: "Username is required" })}
                 id="username"
+                aria-invalid={errors.username ? "true" : "false"}
               />
               {errors.username && (
                 <p className="text-sm text-red-500">
@@ -112,6 +115,7 @@ export const ProfileForm = () => {
                     message: "Password must be at least 6 characters",
                   },
                 })}
+                aria-invalid={errors.password ? "true" : "false"}
                 id="password"
                 type="password"
               />
@@ -138,7 +142,13 @@ export const ProfileForm = () => {
       </div>
 
       <div className="flex justify-end">
-        <Button type="submit">Save</Button>
+        <Button
+          type="submit"
+          aria-label="Save profile"
+          onClick={() => alert(`Profile saved`)}
+        >
+          Save
+        </Button>
       </div>
     </form>
   );

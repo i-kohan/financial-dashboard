@@ -81,6 +81,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen = true, onClose }) => {
       <div className="flex h-full flex-col">
         {onClose && (
           <button
+            aria-label="Close menu button"
             className="absolute top-2 right-2 lg:hidden"
             onClick={onClose}
           >
@@ -99,6 +100,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen = true, onClose }) => {
 
             return (
               <Link
+                aria-label={item.name}
                 key={item.name}
                 to={item.isActive ? item.path : "#"}
                 className={clsx(

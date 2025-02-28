@@ -64,7 +64,7 @@ const wrapPromise = <T>(promise: Promise<T>) => {
 
 const mockPromise = <T>(data: T) => {
   return wrapPromise<T>(
-    new Promise((resolve) => setTimeout(() => resolve(data), 2000)),
+    new Promise((resolve) => setTimeout(() => resolve(data), 100)),
   );
 };
 
