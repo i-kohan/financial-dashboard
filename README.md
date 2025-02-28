@@ -1,51 +1,112 @@
-# React + TypeScript + Vite
+# Project Setup Instructions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Prerequisites
 
-Currently, two official plugins are available:
+Ensure you have the following installed on your system:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Node.js** (LTS version recommended)
+- **Yarn** or **npm** (package manager)
+- **Git** (for version control)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clone the repository:**
+   ```sh
+   git clone <repository-url>
+   cd <repository-name>
+   ```
+2. **Install dependencies:**
+   Using Yarn:
+   ```sh
+   yarn install
+   ```
+   Or using npm:
+   ```sh
+   npm install
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+## Running the Application
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Development Mode
+
+To start the development server:
+
+```sh
+yarn dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Or using npm:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm run dev
 ```
-# financial-dashboard
+
+The app should be available at `http://localhost:5173/` (default Vite port).
+
+### Production Build
+
+To create a production-ready build:
+
+```sh
+yarn build
+```
+
+Or using npm:
+
+```sh
+npm run build
+```
+
+To preview the build:
+
+```sh
+yarn preview
+```
+
+Or using npm:
+
+```sh
+npm run preview
+```
+
+## Project Structure
+
+```
+📂 src/
+ ├── 📂 components/       # Reusable UI components
+ ├── 📂 context/          # Context providers
+ ├── 📂 features/         # Feature-based modules
+ ├── 📂 icons/            # Icon components
+ ├── 📂 layouts/          # Layout components
+ ├── 📂 pages/            # Page components
+ ├── 📂 services/         # API calls and external services
+ ├── 📜 index.css         # Main styles
+ ├── 📜 main.tsx          # Entry point
+ ├── 📜 routes.tsx        # Route definitions
+```
+
+## Libraries Used
+
+- **Vite** (for fast development server and build process)
+- **React 19** with `React.lazy()` and `Suspense` for performance optimization
+- **Tailwind CSS** (for styling)
+- **React Hook Form** (for form handling and validation)
+- **Context API** (for global state management, e.g., user profile data)
+- **Lazy-loading & Code Splitting** (for performance optimization)
+- **Swiper** (for interactive carousels/sliders)
+- **React Chart.js 2** (for data visualizations)
+- **Accessibility Features** (ARIA labels, keyboard navigation)
+
+## Known Issues & Future Improvements
+
+- Improve initial load time by optimizing image loading.
+- Implement service workers for caching static assets.
+- Enhance mobile responsiveness in some areas.
+
+## License
+
+This project is licensed under the MIT License. See `LICENSE` for details.
+
+---
+
+For any issues, contact **Ilya** at **[i.kohanvs@gmail.com](mailto:i.kohanvs@gmail.com)**.
