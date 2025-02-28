@@ -12,8 +12,8 @@ Ensure you have the following installed on your system:
 
 1. **Clone the repository:**
    ```sh
-   git clone <repository-url>
-   cd <repository-name>
+   git clone https://github.com/i-kohan/financial-dashboard.git
+   cd financial-dashboard
    ```
 2. **Install dependencies:**
    Using Yarn:
