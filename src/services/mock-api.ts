@@ -70,6 +70,7 @@ const mockPromise = <T>(data: T) => {
 
 export interface MockApi {
   getCards: { read(): Card[] };
+  getAllCards: { read(): Card[] };
   getTransactions: { read(): Transaction[] };
   getWeeklyActivity: { read(): WeeklyActivity[] };
   getExpenseStatistics: { read(): ExpenseStatistics[] };
@@ -88,6 +89,36 @@ export const mockApi: MockApi = {
     },
     {
       id: 2,
+      balance: 8200,
+      holder: "John Doe",
+      number: "4491 **** **** 5678",
+      validThru: "11/24",
+    },
+  ]),
+  getAllCards: mockPromise([
+    {
+      id: 1,
+      balance: 5756,
+      holder: "Eddy Cusuma",
+      number: "3778 **** **** 1234",
+      validThru: "12/22",
+    },
+    {
+      id: 2,
+      balance: 8200,
+      holder: "John Doe",
+      number: "4491 **** **** 5678",
+      validThru: "11/24",
+    },
+    {
+      id: 3,
+      balance: 8200,
+      holder: "John Doe",
+      number: "4491 **** **** 5678",
+      validThru: "11/24",
+    },
+    {
+      id: 4,
       balance: 8200,
       holder: "John Doe",
       number: "4491 **** **** 5678",

@@ -35,7 +35,7 @@ const menuItems = [
   {
     name: "Credit Cards",
     path: "/credit-cards",
-    isActive: false,
+    isActive: true,
     Icon: <CreditCardIcon />,
   },
   { name: "Loans", path: "/loans", isActive: false, Icon: <LoanIcon /> },

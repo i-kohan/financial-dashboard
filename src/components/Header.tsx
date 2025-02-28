@@ -1,3 +1,4 @@
+import { useUser } from "../context/UserContext/UserContext";
 import { NotificationIcon } from "../icons/NotificationIcon";
 import { SearchIcon } from "../icons/SearchIcon";
 import { SettingsIcon } from "../icons/SettingsIcon";
@@ -9,6 +10,8 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ onMenuClick, pageTitle }) => {
+  const { user } = useUser();
+
   return (
     <header className="flex w-full items-center justify-between bg-white p-8 shadow-md">
       <button className="lg:hidden" onClick={onMenuClick}>
@@ -20,6 +23,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, pageTitle }) => {
       <div className="flex items-center space-x-8">
         <div className="relative hidden md:block">
           <Input
+            variant="filled"
             placeholder="Search for something"
             type="text"
             className="pl-12"
@@ -38,12 +42,7 @@ export const Header: React.FC<HeaderProps> = ({ onMenuClick, pageTitle }) => {
           </button>
 
           <div className="h-10 w-10 overflow-hidden rounded-full">
-            <img
-              src="assets/avatars/avatar (6).png"
-              alt="User Profile"
-              width={40}
-              height={40}
-            />
+            <img src={user.avatar} alt="User Profile" width={40} height={40} />
           </div>
         </div>
       </div>

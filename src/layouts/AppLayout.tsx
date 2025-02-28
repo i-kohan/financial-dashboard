@@ -35,7 +35,7 @@ export const AppLayout: React.FC<LayoutProps> = ({ children, pageTitle }) => {
           onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)}
         />
         <main className="flex-1 overflow-auto">
-          <div className="mx-auto w-full max-w-[770px] p-6 2xl:max-w-[1158px]">
+          <div className="mx-auto w-full max-w-[770px] py-6 2xl:max-w-[1158px] 2xl:px-6">
             {children}
           </div>
         </main>
