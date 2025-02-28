@@ -34,8 +34,13 @@ export const QuickTransferContent = () => {
             ref={swiperRef}
             modules={[Navigation]}
             spaceBetween={20}
-            slidesPerView={3}
             allowTouchMove={false}
+            breakpoints={{
+              0: { slidesPerView: 2 },
+              540: { slidesPerView: 3 },
+              630: { slidesPerView: 4 },
+              1536: { slidesPerView: 3 },
+            }}
           >
             {contacts.map((contact) => (
               <SwiperSlide key={contact.id}>
@@ -64,6 +69,7 @@ export const QuickTransferContent = () => {
 
         <div className="relative">
           <Input
+            variant="filled"
             type="number"
             placeholder="525.50"
             value={amount}

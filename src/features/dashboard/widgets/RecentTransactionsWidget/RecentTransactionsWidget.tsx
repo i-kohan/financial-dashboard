@@ -13,7 +13,7 @@ export const RecentTransactionsWidget = () => {
         fallback={<div className="text-red-500">Something went wrong!</div>}
       >
         <Suspense fallback={<Skeleton />}>
-          <WidgetItemWrapper>
+          <WidgetItemWrapper className="overflow-auto">
             <RecentTransactionsContent />
           </WidgetItemWrapper>
         </Suspense>

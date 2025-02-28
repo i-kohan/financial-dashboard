@@ -7,7 +7,7 @@ import { CardsList } from "./CardsList";
 
 export const MyCardsWidget = () => {
   return (
-    <WidgetWrapper title="My Cards" seeAllLink="/cards">
+    <WidgetWrapper title="My Cards" seeAllLink="/credit-cards">
       <ErrorBoundary
         fallback={<div className="text-red-500">Something went wrong!</div>}
       >

@@ -7,7 +7,7 @@ export const CardsList: React.FC = () => {
   const cardVariants = ["dark", "light", "blue"] as const;
 
   return (
-    <div className="flex gap-4 overflow-x-hidden">
+    <div className="flex justify-between gap-4 overflow-x-clip md:overflow-visible">
       {cardsData.map((card, index) => (
         <CreditCard
           key={index}
