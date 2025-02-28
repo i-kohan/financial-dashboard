@@ -1,15 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard";
-import Settings from "./pages/Settings";
+import { Dashboard } from "./pages/Dashboard";
+import { Setting } from "./pages/Setting";
 
-const AppRoutes = () => (
+export const AppRoutes = () => (
   <Router>
     <Routes>
       <Route path="/" element={<Dashboard />} />
-      <Route path="/settings" element={<Settings />} />
+      <Route path="/setting" element={<Setting />} />
     </Routes>
   </Router>
 );
-
-export default AppRoutes;
