@@ -103,10 +103,6 @@ npm run preview
 - Implement service workers for caching static assets.
 - Enhance mobile responsiveness in some areas.
 
-## License
-
-This project is licensed under the MIT License. See `LICENSE` for details.
-
 ---
 
 For any issues, contact **Ilya** at **[i.kohanvs@gmail.com](mailto:i.kohanvs@gmail.com)**.
